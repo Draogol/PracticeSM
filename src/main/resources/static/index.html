@@ -55,7 +55,10 @@
         	<input type="text" class="form-control" id="PassportNumber" placeholder="Номер паспорта">
         </div>
 	</div>
-    <div class="col-sm-4"> <button type="submit" id="submitID" class="btn btn-default" onClick="StartMes()">Отправить</button> </div>
+    <div class="col-sm-4"> 
+		<button type="submit" id="submitID" class="btn btn-default" onClick="StartMes()">Отправить</button>
+		<button class="btn btn-default" onClick="testF('0', 'Хуй', '6969'); return false;">Test</button>
+	  </div>
   </div>
   <hr>
   <div class="row">
@@ -76,17 +79,19 @@
   </div>
 	<hr>
 	<!--Далее список из базы!-->
-	<div class="row">
-    <div class="col-sm-4 text-left">
-      <p>%Какой-то номер%</p>
-    </div>
-    <div class="text-left col-sm-4">
-      <p>%Какое-то имя%</p>
+	<div class="DBUpdateList">
+		<div class="row">
+    		<div class="col-sm-4 text-left">
+      			<span class="newIndex"><p>%Какой-то номер%</p></span>
+    		</div>
+    		<div class="text-left col-sm-4">
+				<span class="newName"><p>%Какое-то имя%</p></span>
+			</div>
+    		<div class="text-left col-sm-4">
+				<span class="newNum"><p>%Какой-то номер%</p></span>
+    		</div>
+  		</div>
 	</div>
-    <div class="text-left col-sm-4">
-      <p>%Какой-то номер%</p>
-    </div>
-  </div>
   <hr>
   <div class="row">
     <div class="text-center col-md-6 col-md-offset-3">
