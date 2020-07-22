@@ -2,7 +2,6 @@
 package com.example.demo.controller;
 import com.example.demo.model.Student;
 import com.example.demo.service.StudentService;
-import com.example.demo.service.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,11 +15,12 @@ public class StudentController {
     private StudentService studentService;
 
 	@GetMapping("/add")
-	public void add(
+	public List<Student> add(
 	        @RequestParam(value = "name", defaultValue = "World") String name,
             @RequestParam(value = "passportNumber", defaultValue = "no passport") String passportNumber
     ) {
         studentService.addStudent(name, passportNumber);
+        return studentService.findAll();
 //        Connection connection = DriverManager.getConnection("jdbc:h2:mem:testdb", "sa", "");
 //        PreparedStatement statement = connection.prepareStatement("select * from student");
 //        ResultSet resultSet = statement.executeQuery();
